@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MusicActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bg_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:background="@drawable/shape_shadow_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.tech.slideshow.customviews.EmptyRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/seekbarContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+    <LinearLayout
+        android:id="@+id/seekbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ads_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.tech.slideshow.customviews.PlayPauseView
+                android:id="@+id/btPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_transparent"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true"
+                app:anim_direction="negative"
+                app:anim_duration="300"
+                app:bg_color="#00ffffff"
+                app:btn_color="@color/text_headline_color" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="RtlHardcoded">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_music_note_black_24dp"
+                    app:tint="@color/text_headline_color" />
+
+                <TextView
+                    android:id="@+id/tvPlaytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/tvTotalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.tech.slideshow.customviews.rangeseekbar.RangeSeekBar
+            android:id="@+id/seekbarRangeView"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            app:rsb_gravity="center"
+            app:rsb_min_interval="2"
+            app:rsb_mode="range"
+            app:rsb_progress_color="@color/colorAccent" />
+
+        <RelativeLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:hint="@string/str_start"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_headline_color"
+                android:textSize="12sp"
+                tools:ignore="TextViewEdits" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/start_sub"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/tvStart"
+                android:background="?attr/selectableItemBackground"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_remove_24"
+                android:tint="@color/text_headline_color" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/start_add"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/start_sub"
+                android:background="?attr/selectableItemBackground"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_add_24"
+                android:tint="@color/text_headline_color" />
+
+            <TextView
+                android:id="@+id/tvRange"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/end_sub"
+                android:layout_toEndOf="@+id/start_add"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="99:99"
+                android:textColor="@color/text_headline_color"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/end_sub"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/end_add"
+                android:background="?attr/selectableItemBackground"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_remove_24"
+                android:tint="@color/text_headline_color" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/end_add"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/tvEndTime"
+                android:background="?attr/selectableItemBackground"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_add_24"
+                android:tint="@color/text_headline_color" />
+
+            <TextView
+                android:id="@+id/tvEndTime"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:hint="@string/str_end"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_headline_color"
+                android:textSize="12sp"
+                tools:ignore="TextViewEdits" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/ic_slideshow"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/str_apply"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ads_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#f2f2f2"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include layout="@layout/ad_container_banner_7" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"-->
+    <!--        tools:ignore="ScopedStorage" />-->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <queries>
+        <package android:name="com.google.android.youtube" />
+        <package android:name="com.facebook.katana" />
+        <package android:name="com.google.android.gm" />
+        <package android:name="com.facebook.orca" />
+        <package android:name="com.whatsapp" />
+        <package android:name="com.instagram.android" />
+
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.AD" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".MyApplication"
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true"
+
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource" />
+        <activity
+            android:name=".activities.ViewFullActivity"
+            android:exported="false"
+            android:theme="@style/ActivityViewFull" />
+        <activity
+            android:name=".activities.RenderVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MusicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ShareVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.IntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SlideShowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GalleryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false"
+            android:theme="@style/MainActivity"/>
+        <activity
+            android:name=".activities.ReorderPhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.BrowserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".photopick.ui.MatisseActivity"
+            android:theme="@style/ActivityChoosePhoto" />
+        <activity
+            android:name=".photopick.internal.ui.SelectedPreviewActivity"
+            android:theme="@style/ActivityChoosePhoto" />
+        <activity
+            android:name=".photopick.internal.ui.AlbumPreviewActivity"
+            android:theme="@style/ActivityChoosePhoto" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.CreateVideoService" />
+        <service android:name=".service.CreateImageService" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.tech.slideshow.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/id_app_admob_test" />
+    </application>
+
+</manifest>

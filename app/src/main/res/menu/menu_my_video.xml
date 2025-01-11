@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/str_action_delete" />
+
+    <item
+        android:id="@+id/navigation_share"
+        android:icon="@drawable/ic_share_black"
+        android:title="@string/str_action_share" />
+
+    <item
+        android:id="@+id/navigation_rename"
+        android:icon="@drawable/ic_rename"
+        android:title="@string/str_action_rename" />
+
+</menu>

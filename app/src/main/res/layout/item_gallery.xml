@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingTop="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_pdf_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            android:id="@+id/indexTv"-->
+        <!--            style="@style/FontSemiBold"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="18dp"-->
+        <!--            android:layout_gravity="bottom"-->
+        <!--            android:background="@drawable/ip_bg_convert_index"-->
+        <!--            android:paddingLeft="4dp"-->
+        <!--            android:paddingRight="4dp"-->
+        <!--            android:text="34"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="14sp" />-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_icon"
+            android:layout_width="71dp"
+            android:layout_height="81dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="71dp"
+            android:layout_height="81dp"
+            android:background="@drawable/bg_shape_corner6_icon" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_pdf_more"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/touch_effect"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:scaleType="fitXY"
+        android:tint="@color/text_headline_color"
+        android:src="@drawable/baseline_more_vert_24"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/item_pdf_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_pdf_icon" />
+
+    <Space
+        android:id="@+id/space_right"
+        android:layout_width="24dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_name"
+        style="@style/TextViewFont_PopMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="middle"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_headline_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/space_right"
+        app:layout_constraintStart_toEndOf="@+id/item_pdf_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="left|center_vertical|center_horizontal|center|start"
+        app:layout_constraintEnd_toStartOf="@+id/space_right"
+        app:layout_constraintStart_toStartOf="@+id/item_name"
+        app:layout_constraintTop_toBottomOf="@+id/item_name">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_date"
+            style="@style/TextViewFont_PopMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:includeFontPadding="false"
+            android:text="20/10/2013"
+            android:textColor="@color/colorNormalText"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_size"
+            style="@style/TextViewFont_PopMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="10Mb"
+            android:textColor="@color/colorNormalText"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorPositiveLineTint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_name"
+        app:layout_constraintTop_toBottomOf="@id/item_folder_img" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_folder_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/item_pdf_icon"
+        app:layout_constraintStart_toEndOf="@+id/item_pdf_icon"
+        app:srcCompat="@drawable/ic_home_item_folder" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_source"
+        style="@style/TextViewFont_PopMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorNormalText"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_folder_img"
+        app:layout_constraintEnd_toEndOf="@+id/item_name"
+        app:layout_constraintStart_toEndOf="@+id/item_folder_img"
+        app:layout_constraintTop_toTopOf="@+id/item_folder_img" />
+</androidx.constraintlayout.widget.ConstraintLayout>

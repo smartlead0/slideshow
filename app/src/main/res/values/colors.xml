@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorA0">#0a0a0a</color>
+    <color name="opa_view_video">#85000000</color>
+
+    <color name="colorTabRipple">#1ac9e2ff</color>
+    <color name="color_bg_dialog_edit_text">#f4f5f8</color>
+
+    <color name="colorPrimary">#1aae70</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent">#f44831</color>
+    <color name="bg_ads">#ffffff</color>
+    <color name="colorPrimaryLine">#ff000000</color>
+
+    <color name="colorPrimaryTint">#006cff</color>
+    <color name="background">#f5f5f5</color>
+    <color name="text_title_color">#222222</color>
+    <color name="colorConvertLoadingBg">#e3e7ef</color>
+    <color name="colorEtTint">#aab9cb</color>
+    <color name="colorPositiveLineTint">#1a000000</color>
+    <color name="colorAccentTint">#ffffffff</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="gnt_gray">#aaaaaa</color>
+    <color name="red">#ea3663</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="color_btn_negative_bound">#e8ebf3</color>
+    <color name="bg_dialog">#ffffff</color>
+    <color name="bg_cancel_text_color">#4c5462</color>
+    <color name="no_color">#00000000</color>
+    <color name="dialog_view_line">#444444</color>
+
+    <color name="colorPrimaryText">#ff041d45</color>
+    <color name="bg_title">#ffffff</color>
+    <color name="colorNormalText">#78869d</color>
+    <color name="text_sub_title_color">#686868</color>
+    <color name="text_headline_color">#222222</color>
+    <color name="rsbColorSeekBarDefault">#c3c3c3</color>
+    <color name="rsbColorThumbPressed">#FFE7E7E7</color>
+    <color name="rsbColorThumbDefault">#FFFFFF</color>
+    <color name="rsbColorThumbBorder">#FFD7D7D7</color>
+</resources>

@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name" translatable="false">MagicShow</string>
+    <string name="select">Select</string>
+    <string name="str_action_ok">OK</string>
+    <string name="id_app_admob_test" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="artist_name">Movie maker</string>
+    <string name="dialog_rate_action">Rate</string>
+
+    <string name="album_name_all">All Media</string>
+    <string name="button_preview">Preview</string>
+    <string name="button_apply_default">Apply</string>
+    <string name="button_apply">Apply(%1$d)</string>
+    <string name="button_back">Back</string>
+    <string name="photo_grid_capture">Camera</string>
+    <string name="empty_text">No media yet</string>
+    <string name="error_over_count_default">You have reached max selectable</string>
+    <string name="error_over_count" translatable="false">You can only select up to %1$d media files</string>
+    <string name="error_under_quality">Under quality</string>
+    <string name="error_over_quality">Over quality</string>
+    <string name="error_file_type">Unsupported file type</string>
+    <string name="error_type_conflict">Can\'t select images and videos at the same time</string>
+    <string name="error_no_video_activity">No App found supporting video preview</string>
+    <string name="error_over_original_size" translatable="false">Can\'t select the images larger than %1$d MB</string>
+    <string name="error_over_original_count" translatable="false">%1$d images over %2$d MB. Original will be unchecked</string>
+    <string name="navigation_feedback_or_suggestion">Feedback or suggestion</string>
+    <string name="share_message">Let me recommend you this application</string>
+    <string name="share_to">Share to</string>
+    <string name="dialog_rate_tip">Your 5-star rating is our best gift!</string>
+    <string name="dialog_rate_message">Your approval helps spread the word and grow our product!</string>
+    <string name="dialog_rate_tip_4_5_star">Yay!</string>
+    <string name="dialog_rate_tip_4_5_message">Thanks for your support!</string>
+    <string name="dialog_rate_tip_3_star">Oops…</string>
+    <string name="dialog_rate_tip_3_messege">Seems like you got some problems while using our app.</string>
+    <string name="str_action_share">Share</string>
+    <string name="str_action_rename">Rename</string>
+    <string name="image_processing">Image processing</string>
+    <string name="video_processing">Video processing</string>
+
+    <string name="toolbar_tittle_choose_language">Choose Language</string>
+    <string name="long_press_to_manual_sorting">Long press to sort manually</string>
+    <string name="version">Version: %1$s</string>
+    <string name="share_app_tittle">My application name</string>
+    <string name="share_action">Choose one</string>
+    <string name="duration_each_photo">Duration each Photo</string>
+    <string name="indicator">Indicator</string>
+    <string name="str_action_cancel">Cancel</string>
+    <string name="str_action_delete">Delete</string>
+    <string name="str_go_back">Go back</string>
+    <string name="already_in_use">This name is already in use.</string>
+    <string name="dialog_rename_error_2">Invalid characters (@, #, $…)</string>
+    <string name="dialog_rename_error">Same Name</string>
+    <string name="dialog_rename_fail">Failed to rename file</string>
+
+    <string name="navigation_rate_us">Rate us</string>
+    <string name="navigation_family_apps">Family Apps (AD)</string>
+    <string name="navigation_privacy_policy">Privacy policy</string>
+    <string name="navigation_language">Language</string>
+    <string name="str_make_video">Make Video</string>
+    <string name="str_my_video">My Video</string>
+    <string name="str_arrange_image">Arrange Image</string>
+    <string name="str_next">Next</string>
+    <string name="str_done">Done</string>
+    <string name="str_close">Close</string>
+    <string name="str_import">Import</string>
+    <string name="title_video_editor">Video Editor</string>
+    <string name="str_reorder">Reorder</string>
+    <string name="str_add">Add</string>
+    <string name="str_my_music">My Music</string>
+    <string name="saving_your_video">Saving your video…</string>
+    <string name="your_video_will_automatically_play_when_ready">Your video will automatically play when ready</string>
+    <string name="str_transition">Transition</string>
+    <string name="str_photo">Photo</string>
+    <string name="str_music">Music</string>
+    <string name="str_frame">Frame</string>
+    <string name="str_duration">Duration</string>
+    <string name="dialog_exit_body">Are you sure want exit?</string>
+    <string name="quit_rendering">Quit Rendering?</string>
+    <string name="cancel_render_content">Do you want to cancel rendering?</string>
+    <string name="keep_rendering">Keep</string>
+    <string name="exit">Exit</string>
+    <string name="leave_without_saving">Leave without saving?</string>
+    <string name="leave_edit">The changes you have made will not be saved.</string>
+    <string name="splash_privacy_policy">Privacy Policy</string>
+    <string name="title_question_exit">Are you satisfied with SlideShow Maker?</string>
+    <string name="message_question_exit">If you have a trouble when reading files, click to feedback to us</string>
+    <string name="dialog_exit_tittle">Do you want to exit ?</string>
+    <string name="str_feed_back_app">FeedBack SlideShow Maker app</string>
+    <string name="toast_exit_app">Press back again to exit</string>
+    <string name="str_apply">Apply</string>
+    <string name="str_end">End</string>
+    <string name="str_start">Start</string>
+    <string name="str_no_files_yet">No files yet</string>
+    <string name="dialog_delete_body">Are you sure want to delete? This action cannot be undone</string>
+
+    <string name="toast_permission_denied">"Permission denied"</string>
+    <string name="toast_video_does_not_exist">Video does not exist!</string>
+    <string name="toast_share_video_via">Share video via</string>
+    <string name="toast_unable_to_share_the_video">Unable to share the video.</string>
+    <string name="str_create_video">Create Video</string>
+    <string name="str_choose_ratio">Choose Ratio</string>
+    <string name="str_gallery">Gallery</string>
+    <string name="toast_video_path_not_found">Video path not found!</string>
+    <string name="share_other">Other</string>
+    <string name="app_not_install">Can\'t find this App, please download and try it again</string>
+    <string name="toast_app_not_found">No app found!</string>
+    <string name="share_twitter" translatable="false">Twitter</string>
+    <string name="share_whatsapp" translatable="false">WhatsApp</string>
+    <string name="share_youtube" translatable="false">YouTube</string>
+    <string name="share_facebook" translatable="false">FaceBook</string>
+    <string name="share_gmail" translatable="false">Gmail</string>
+    <string name="share_instagram" translatable="false">Instagram</string>
+    <string name="share_messenger" translatable="false">Messenger</string>
+    <string name="str_save_your_best_moments">Save your best moments</string>
+    <string name="str_go_settings">Go Settings</string>
+    <string name="storage_to_create_videos">The app needs permission to access photos. Please open the app settings and grant the permission.</string>
+    <string name="turn_on_permission_guide">Turn on permission</string>
+    <string name="dialog_permission_required_title">Permission Required</string>
+    <string name="toast_need_permission">You need to grant permission to continue.</string>
+    <string name="str_preparing">Preparing</string>
+    <string name="toast_more_2_images">Select more than 2 Images for create video</string>
+    <string name="str_creating_video">Creating Video</string>
+    <string name="str_making_in_progress">Making in progress</string>
+    <string name="str_make_your_photo_dance_with_music">Make Your Photo Dance With Music</string>
+    <string name="str_share_to_the_world">Share To The World</string>
+    <string name="str_let_your_memories_inspire_others">Let Your Memories Inspire Others.</string>
+    <string name="str_beautiful_scene_transitions">Beautiful scene transitions</string>
+    <string name="str_have_many_transition_effect">Have many transition effect!</string>
+    <string name="str_welcome_to">"Welcome to "</string>
+</resources>

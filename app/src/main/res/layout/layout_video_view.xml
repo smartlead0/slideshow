@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/pv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/pv_preview"
+        app:layout_constraintEnd_toEndOf="@+id/pv_preview"
+        app:layout_constraintStart_toStartOf="@+id/pv_preview"
+        app:layout_constraintTop_toTopOf="@+id/pv_preview" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="@+id/pv_preview"
+        app:layout_constraintEnd_toEndOf="@+id/pv_preview"
+        app:layout_constraintStart_toStartOf="@+id/pv_preview"
+        app:layout_constraintTop_toTopOf="@+id/pv_preview"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_speed="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_full"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_view_full" />
+</androidx.constraintlayout.widget.ConstraintLayout>

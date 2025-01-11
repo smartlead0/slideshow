@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v_root"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="24dp"
+
+        android:background="@drawable/shape_round_rect_dialog_bg"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+
+        app:layout_constraintTop_toBottomOf="@+id/space">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/iv_img"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/v_root"
+        app:layout_constraintStart_toStartOf="@+id/v_root"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/heart" />
+
+    <TextView
+        android:id="@+id/tv_feedback_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="@string/dialog_rate_tip"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@+id/v_root"
+        app:layout_constraintStart_toStartOf="@+id/v_root"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img" />
+
+    <TextView
+        android:id="@+id/tv_feedback_tip_gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/dialog_rate_message"
+        android:textColor="@color/colorNormalText"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@+id/v_root"
+        app:layout_constraintStart_toStartOf="@+id/v_root"
+        app:layout_constraintTop_toBottomOf="@id/tv_feedback_tip" />
+
+
+    <LinearLayout
+        android:id="@+id/comment_star_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-20dp"
+        android:weightSum="5"
+        app:layout_constraintDimensionRatio="210:52"
+        app:layout_constraintEnd_toEndOf="@+id/v_root"
+        app:layout_constraintStart_toStartOf="@+id/v_root"
+        app:layout_constraintTop_toBottomOf="@id/space2"
+        app:layout_constraintWidth_percent="0.69">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStar1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/ic_un_star_up" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStar2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/ic_un_star_up" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStar3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/ic_un_star_up" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStar4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/ic_un_star_up" />
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivStar5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/ic_un_star_up" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivOffer"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_offer_5star"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="29dp"
+        android:layout_height="15dp"
+        app:layout_constraintStart_toEndOf="@+id/comment_star_view"
+        app:layout_constraintTop_toBottomOf="@id/tv_feedback_tip_gone" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/iv_anim"
+        android:layout_width="71dp"
+        android:layout_height="64dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/space2"
+        app:layout_constraintTop_toTopOf="@+id/space2" />
+
+    <FrameLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="@+id/v_root"
+        app:layout_constraintStart_toStartOf="@+id/v_root"
+        app:layout_constraintTop_toBottomOf="@id/comment_star_view">
+
+        <TextView
+            android:id="@+id/v_continue"
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_positive"
+            android:enabled="false"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="@string/dialog_rate_action"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+[versions]
+agp = "8.7.3"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+
+dexter = "6.2.3"
+lottie = "6.3.0"
+glide = "4.16.0"
+imagezoom = "2.3.0"
+media3Ui = "1.5.0"
+media3Exoplayer = "1.5.0"
+advrecyclerview = "1.0.0"
+shimmer = "0.5.0"
+dotsindicator = "5.0"
+mobileFfmpegMinGpl = "4.4.LTS"
+androidAdvancedwebview = "v3.2.1"
+playServicesAds = "23.5.0"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+android-advancedwebview = { module = "com.github.delight-im:Android-AdvancedWebView", version.ref = "androidAdvancedwebview" }
+
+dexter = { module = "com.karumi:dexter", version.ref = "dexter" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+imagezoom = { module = "it.sephiroth.android.library.imagezoom:imagezoom", version.ref = "imagezoom" }
+media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3Exoplayer" }
+media3-ui = { module = "androidx.media3:media3-ui", version.ref = "media3Ui" }
+advrecyclerview = { module = "com.h6ah4i.android.widget.advrecyclerview:advrecyclerview", version.ref = "advrecyclerview" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
+dotsindicator = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }
+mobile-ffmpeg-min-gpl = { module = "com.arthenica:mobile-ffmpeg-min-gpl", version.ref = "mobileFfmpegMinGpl" }
+play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

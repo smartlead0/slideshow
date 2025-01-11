@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingStart="0dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:titleTextAppearance="@style/TitleCollapseAppBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/action_bar"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--            <androidx.appcompat.widget.AppCompatImageView-->
+        <!--                android:id="@+id/btMenu"-->
+        <!--                android:layout_width="56dp"-->
+        <!--                android:layout_height="56dp"-->
+        <!--                android:foreground="?attr/selectableItemBackground"-->
+        <!--                android:padding="16dp"-->
+        <!--                android:src="@drawable/ic_menu" />-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:layout_marginLeft="8dp"-->
+        <!--                android:layout_marginTop="2dp"-->
+        <!--                android:layout_marginRight="8dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:fontFamily="@font/poppins_medium"-->
+        <!--                android:gravity="center_vertical"-->
+        <!--                android:text="@string/app_name"-->
+        <!--                android:textColor="@color/colorPrimaryText"-->
+        <!--                android:textSize="24sp" />-->
+
+        <!--            <com.airbnb.lottie.LottieAnimationView-->
+        <!--                android:id="@+id/lottieView"-->
+        <!--                android:layout_width="56dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:foreground="?attr/selectableItemBackground"-->
+        <!--                android:paddingBottom="4dp"-->
+        <!--                android:visibility="gone"-->
+        <!--                app:lottie_autoPlay="false"-->
+        <!--                app:lottie_loop="true"-->
+        <!--                app:lottie_rawRes="@raw/ad_gift" />-->
+        <!--        </LinearLayout>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ads_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="#f2f2f2"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/btSlideshow"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <include layout="@layout/ad_container_big_8" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btSlideshow"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btMyVideo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_button_slideshow"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/home_ic_edit"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="SlideShow"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btMyVideo"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintLeft_toRightOf="@+id/btSlideshow"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_button_mystudio"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="7dp"
+                    android:src="@drawable/home_ic_studio"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/str_gallery"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/my_template_banner">
+
+
+            <LinearLayout
+                android:id="@+id/bottom_iv1"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/bottom_iv2">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/actionBarItemBackground"
+                    android:padding="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_rate" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_iv2"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+
+                app:layout_constraintLeft_toRightOf="@+id/bottom_iv1"
+                app:layout_constraintRight_toLeftOf="@+id/bottom_iv3">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/actionBarItemBackground"
+                    android:padding="15dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_share" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_iv3"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@+id/bottom_iv2"
+                app:layout_constraintRight_toLeftOf="@+id/bottom_iv4">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/actionBarItemBackground"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_apps" />
+
+
+            </LinearLayout>
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:id="@+id/bottom_iv2"-->
+            <!--                android:layout_width="56dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:background="@drawable/icon_bg"-->
+            <!--                android:foreground="?attr/selectableItemBackground"-->
+            <!--                android:padding="12dp"-->
+            <!--                android:src="@drawable/ic_vector_share"-->
+            <!--                app:layout_constraintLeft_toRightOf="@+id/bottom_iv1"-->
+            <!--                app:layout_constraintRight_toLeftOf="@+id/bottom_iv3" />-->
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:id="@+id/bottom_iv3"-->
+            <!--                android:layout_width="56dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:background="@drawable/icon_bg"-->
+            <!--                android:foreground="?attr/selectableItemBackground"-->
+            <!--                android:padding="12dp"-->
+            <!--                android:src="@drawable/ic_vector_app"-->
+            <!--                app:layout_constraintLeft_toRightOf="@+id/bottom_iv2"-->
+            <!--                app:layout_constraintRight_toLeftOf="@+id/bottom_iv4" />-->
+
+            <LinearLayout
+                android:id="@+id/bottom_iv4"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@+id/bottom_iv3"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/actionBarItemBackground"
+                    android:padding="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_privacy" />
+
+
+            </LinearLayout>
+
+            <!--            <androidx.appcompat.widget.AppCompatImageView-->
+            <!--                android:id="@+id/bottom_iv4"-->
+            <!--                android:layout_width="56dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:background="@drawable/icon_bg"-->
+            <!--                android:foreground="?attr/selectableItemBackground"-->
+            <!--                android:padding="12dp"-->
+            <!--                android:src="@drawable/ic_vector_lock"-->
+            <!--                app:layout_constraintLeft_toRightOf="@+id/bottom_iv3"-->
+            <!--                app:layout_constraintRight_toRightOf="parent" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/my_template_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include layout="@layout/ad_container_banner" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

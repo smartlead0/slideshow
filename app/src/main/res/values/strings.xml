@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">MagicShow</string>
+    <string name="app_name" translatable="false">Photo Video Maker</string>
     <string name="select">Select</string>
     <string name="str_action_ok">OK</string>
     <string name="id_app_admob_test" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
